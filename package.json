@@ -1,0 +1,24 @@
+{
+  "name": "liri-node-app1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vengefulbliss/liri-node-app1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vengefulbliss/liri-node-app1/issues"
+  },
+  "homepage": "https://github.com/vengefulbliss/liri-node-app1#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "save": "^2.3.2"
+  }
+}
