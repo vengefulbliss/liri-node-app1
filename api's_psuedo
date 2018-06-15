@@ -23,7 +23,14 @@ request('http://www.google.com', function (error, response, body) {
 
 omdb api
 send all data requests to:
-http://www.omdbapi.com/?apikey=52314070&
+http://www.omdbapi.com/?iapikey=52314070&
 
 poster api requests:
-http://img.omdbapi.com/?apikey=52314070&
+http://img.omdbapi.com/?iapikey=52314070&
+
+
+
+<!--the finishing touches that i have just not been able to figure out. -->
+
+1. i need to get the var spotify = new Spotify on line(keys.spotify) to read as a constructor.... if i had more time i would try to figure it out, but if i am to keep to my schedule i will need to turn it in.
+2. imdb api key has had some difficulty working under the parameters i have set......... code needs to be adjusted to implement the api key better, or importing the key from the .env file like spotify or twitter. 

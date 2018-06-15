@@ -8,9 +8,9 @@ exports.twitter = {
 };
 
 exports.spotify = {
-	spotify_id: process.env.SPOTIFY_ID,
-	spotify_secret: process.env.SPOTIFY_SECRET
+	id: process.env.SPOTIFY_ID,
+	secret: process.env.SPOTIFY_SECRET
 };
-exports.omdb = {
-	consumer_key: "www.omdbapi.com/?i=tt3896198&apikey=52314070"
+exports.imdb = {
+	consumer_key: "www.omdbapi.com/?i=tt3896198&//apikey=52314070"
 };

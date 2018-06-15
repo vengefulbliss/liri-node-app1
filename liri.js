@@ -1,11 +1,12 @@
 require("dotenv").config();
 var keys = require("./keys.js");
 var twitter = keys.twitterKey;
-var spotify = keys.spotify;
-var imdb = keys.imdb;
+var Spotify = require('node-spotify-api');
+var request = require('request');
 // node liri.js command ( - optional)
 var command = process.argv[2];
 var query = process.argv[3];
+console.log(keys.spotify);
 
 // Functions for 3 main functions of the app
 // 	--> do-what-it-says requires the use of functions
@@ -41,12 +42,12 @@ var myTweets = function() {
 
 var spotifyThisSong = function(trackQuery) {
 	// Load Spotify npm package
-	var Spotify = require('spotify');
-	var spotify = new Spotify(keys.spotify)
+	var spotify = new Spotify(keys.spotify); 
+	//var spotify = new Spotify(keys.spotify)
 
 	// Default if no input is registerd.
 	if(trackQuery === undefined) {
-		trackQuery = "the sign ace of base";
+		trackQuery = "I Want It That Way";
 	}
 
 	// Spotify API request (if an object is returned, output artist(s), song, preview link,album)
@@ -73,15 +74,15 @@ var spotifyThisSong = function(trackQuery) {
 
 var movieThis = function(movieQuery) {
 	// Load request npm module
-	var Imdb = require("imdb");
-	var imdb = new Imdb(keys.imdb);
+	//var Imdb = require("imdb");
+	//var imdb = new Imdb(keys.imdb);
 	// if query that is passed in is undefined, Mr. Nobody becomes the default
 	if(movieQuery === undefined) {
 		movieQuery = "mr nobody";
 	}
 
 	// HTTP GET request
-	imdb("http://www.omdbapi.com/?iapikey=52314070&" + movieQuery + "&y=&plot=short&r=json", function(error, response, body) {
+	request("http://www.omdbapi.com/?i=tt3896198&apikey=52314070&" + movieQuery + "&y=&plot=short&r=json", function(error, response, body) {
 	  if (!error && response.statusCode === 200) {
 	    console.log("* Title of the movie:         " + JSON.parse(body).Title);
 	    console.log("* Year the movie came out:    " + JSON.parse(body).Year);
